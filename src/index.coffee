@@ -92,7 +92,7 @@ module.exports = (container) ->
       normalMap: rodnormal
 
     objects.camera = camera
-    loader = new THREE.GLTFLoader()
+    loader = new GLTFLoader()
     loader.load 'earthbar3.glb', (object) ->
       object.scenes[0].traverse (child) ->
         if child.isMesh

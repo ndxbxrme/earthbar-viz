@@ -93,7 +93,7 @@
         normalMap: rodnormal
       });
       objects.camera = camera;
-      loader = new THREE.GLTFLoader();
+      loader = new GLTFLoader();
       loader.load('earthbar3.glb', function(object) {
         var i, key, myrod, obj;
         object.scenes[0].traverse(function(child) {
