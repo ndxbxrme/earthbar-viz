@@ -1,0 +1,33 @@
+{
+  "name": "earthbar-viz",
+  "version": "0.0.1",
+  "description": "ndx-framework web app",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "node build/test.js"
+  },
+  "ndx": true,
+  "loadOrder": 5,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ndxbxrme/earthbar-viz"
+  },
+  "author": "ndxbxrme",
+  "license": "MIT",
+  "homepage": "https://github.com/ndxbxrme/earthbar-viz",
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-cli": "^1.3.2",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-coffee": "^2.1.0",
+    "grunt-contrib-nodeunit": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "load-grunt-tasks": "^5.1.0"
+  },
+  "dependencies": {
+    "dotty": "^0.1.0",
+    "three": "^0.111.0",
+    "three-gltf-loader": "^1.110.0",
+    "three-orbitcontrols": "^2.110.1"
+  }
+}
