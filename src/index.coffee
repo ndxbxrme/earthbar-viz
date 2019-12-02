@@ -1,7 +1,7 @@
 module.exports = (container) ->
   THREE = window.THREE = require 'three'
   OrbitControls = require 'three-orbitcontrols'
-  GLTFLoader = require 'three-gltf-loader'
+  GLTFLoader = require './gltfloader'
   Reflector = require './reflector'
   AnimationManager = require './animation-manager'
   easing = require './easing'
@@ -92,7 +92,7 @@ module.exports = (container) ->
       normalMap: rodnormal
 
     objects.camera = camera
-    loader = new GLTFLoader()
+    loader = new THREE.GLTFLoader()
     loader.load 'earthbar3.glb', (object) ->
       object.scenes[0].traverse (child) ->
         if child.isMesh

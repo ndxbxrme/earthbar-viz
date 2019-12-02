@@ -20,12 +20,23 @@ module.exports = (grunt) ->
           dest: 'build'
           ext: '.js'
         }]
+    copy:
+      build:
+        files: [
+          expand: true
+          cwd: 'files'
+          dest: 'build'
+          src: [
+            '**/*.*'
+          ]
+        ]
     clean:
       build: 'build'
     nodeunit:
       tests: ['build/test/**/*.js']
   grunt.registerTask 'build', [
     'clean:build'
+    'copy:build'
     'coffee'
   ]
   grunt.registerTask 'default', [

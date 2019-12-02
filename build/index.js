@@ -3,7 +3,7 @@
     var AnimationManager, GLTFLoader, HEIGHT, OrbitControls, Reflector, THREE, WIDTH, animate, animationManager, barMesh, camera, clock, controls, cubeCamera, easing, init, loaded, mirrorMat, objects, onWindowResize, render, renderer, scene, stateManager;
     THREE = window.THREE = require('three');
     OrbitControls = require('three-orbitcontrols');
-    GLTFLoader = require('three-gltf-loader');
+    GLTFLoader = require('./gltfloader');
     Reflector = require('./reflector');
     AnimationManager = require('./animation-manager');
     easing = require('./easing');
@@ -93,7 +93,7 @@
         normalMap: rodnormal
       });
       objects.camera = camera;
-      loader = new GLTFLoader();
+      loader = new THREE.GLTFLoader();
       loader.load('earthbar3.glb', function(object) {
         var i, key, myrod, obj;
         object.scenes[0].traverse(function(child) {
