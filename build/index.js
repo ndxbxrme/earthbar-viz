@@ -1,10 +1,9 @@
 (function() {
   module.exports = function(container) {
     var AnimationManager, GLTFLoader, HEIGHT, OrbitControls, Reflector, THREE, WIDTH, animate, animationManager, barMesh, camera, clock, controls, cubeCamera, easing, init, loaded, mirrorMat, objects, onWindowResize, render, renderer, scene, stateManager;
-    console.log('starting', container);
     THREE = window.THREE = require('three');
     OrbitControls = require('three-orbitcontrols');
-    GLTFLoader = require('three/examples/js/loaders/GLTFLoader');
+    GLTFLoader = require('three-gltf-loader');
     Reflector = require('./reflector');
     AnimationManager = require('./animation-manager');
     easing = require('./easing');

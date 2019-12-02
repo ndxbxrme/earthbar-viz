@@ -1,7 +1,7 @@
 module.exports = (container) ->
   THREE = window.THREE = require 'three'
   OrbitControls = require 'three-orbitcontrols'
-  GLTFLoader = require 'three/examples/js/loaders/GLTFLoader'
+  GLTFLoader = require 'three-gltf-loader'
   Reflector = require './reflector'
   AnimationManager = require './animation-manager'
   easing = require './easing'
